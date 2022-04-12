@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import logging from './config/logging';
 import config from './config/config';
 import bookRoutes from './routes/book';
+import userRoutes from './routes/user';
 
 import cors from 'cors';
 
@@ -51,6 +52,8 @@ app.use((req, res, next) => {
 
 /**ROUTES */
 app.use('/api/books', bookRoutes);
+app.use('/users', userRoutes);
+
 /**DAha fazla route buraya eklenebilir*/
 
 /**Error handling */
